@@ -5,7 +5,7 @@ pipeline {
 
         stage('Checkout') {
             steps {
-                git 'https://github.com/sinch377/project.git'
+                git 'https://github.com/USERNAME/hello-devops.git'
             }
         }
 
@@ -23,13 +23,13 @@ pipeline {
 
         stage('Build Package') {
             steps {
-                sh 'zip -r project.zip .'
+                sh 'zip -r hello-devops.zip .'
             }
         }
 
         stage('Archive Artifacts') {
             steps {
-                archiveArtifacts artifacts: 'project.zip'
+                archiveArtifacts artifacts: 'hello-devops.zip'
             }
         }
     }

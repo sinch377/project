@@ -1,14 +1,7 @@
 pipeline {
     agent any
 
-    stages {
-
-        stage('Checkout') {
-            steps {
-                git 'https://github.com/sinchana-m/hello-devops.git'
-            }
-        }
-
+    stages{
         stage('Install Dependencies') {
             steps {
                 sh 'pip3 install -r requirements.txt'
